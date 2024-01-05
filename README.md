@@ -10,7 +10,6 @@ I wanted to delve into the `Astro` framework, so I decided to create my **Person
     ```
 - As I alread mentioned, I'll be using [Astro](https://astro.build/) in order to create a static web site, without much logic behind
 
-
 ## 🚀 Project Structure
 
 Inside this Astro project, you'll see the following folders and files:
