@@ -1,3 +1,12 @@
+---
+import SocialMedia from './SocialMedia.astro'
+
+import Github from '../assets/Github.astro'
+import Gmail from '../assets/Gmail.astro'
+import Linkedin from '../assets/Linkedin.astro'
+import Youtube from '../assets/Youtube.astro'
+---
+
 <header class="flex flex-col mt-20 ml-16 items-center">
   <img
     class="rounded-full size-52"
@@ -11,4 +20,23 @@
       <li><a href="/experience">Experience</a></li>
     </ul>
   </nav>
+
+  <section class="flex gap-6 mt-64 ml-10 items-center justify-center">
+    <SocialMedia href="https://linkedin.com/in/tomasarreguib">
+      <Linkedin class="w-6 h-auto" />
+    </SocialMedia>
+
+    <SocialMedia href="https://github.com/noisyBrain">
+      <Github class="w-6 h-auto" />
+    </SocialMedia>
+
+    <!--- TODO: add redirection to gmail --->
+    <SocialMedia href="#" target="blank">
+      <Gmail class="w-6 h-auto" />
+    </SocialMedia>
+
+    <SocialMedia href="https://www.youtube.com/@scriptcrafter" target="_blank">
+      <Youtube class="w-6 h-auto" />
+    </SocialMedia>
+  </section>
 </header>
