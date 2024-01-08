@@ -18,10 +18,9 @@ const { title } = Astro.props;
 		<meta name="generator" content={Astro.generator} />
 		<title>{title}</title>
 	</head>
-  <body class="bg-gradient-to-b from-blue-800 via-blue-950 to-black">
-    <div class="h-screen flex">
+  <body class="w-full h-auto px-48 bg-gradient-to-b from-[#000] via-[#0f0f3d] to-black">
+    <div class="w-full h-screen flex">
       <Header />
-      <h1 class="text-4xl font-bold">Tomás Arregui Bellino</h1>
       <slot />
     </div>
 	</body>
