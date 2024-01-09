@@ -1,0 +1,39 @@
+---
+import Experience from './Experience.astro'
+
+const EXPERIENCES = [
+  {
+    date: "Pronto",
+    description: "Dejo este espacio para ser rellenado con las tareas que realice en tu empresa 😁",
+    nextChallenge: true,
+    image: "/next_challenge.png",
+    tags: [],
+    title: "Full Stack or Backend Developer - Tu Empresa",
+  },
+  {
+    date: "Julio 2023 - Agosto 2023",
+    description: "Trabajo freelance. Encargado de conectar la API del Backend con un Frontend ya existente. Tests unitarios.",
+    image: "/rebill_logo.png",
+    tags: ["Typescript", "NestJs", "MySQL", "Jest"],
+    title: "Full Stack Developer - Rebill",
+  },
+  {
+    date: "Noviembre 2022 - Enero 2023",
+    description: "Encargado del módulo de usuarios e invitaciones de la plataforma. Testing e2e",
+    image: "/toremsoftware_logo.jpeg",
+    tags: ["Typescript", "NodeJs", "PostgreSQL", "MongoDB", "Jest"],
+    title: "Backend Developer - Torem",
+  },
+]
+---
+
+<ol class="mt-20 ml-3 relative border-s border-gray-200 dark:border-gray-700">                  
+    {
+      EXPERIENCES.map((experiencie) => (
+        <li class="mb-10 ms-6">
+          <Experience {...experiencie} />
+        </li>
+      ))
+    }
+</ol>
+

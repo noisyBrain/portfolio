@@ -1,0 +1,46 @@
+---
+import WorkTechnology from './WorkTechnology.astro'
+
+interface Props {
+  date: string;
+  description: string;
+  image: string;
+  nextChallenge?: boolean;
+  tags: string[];
+  title: string;
+}
+
+const { date, description, image, nextChallenge, tags, title } = Astro.props;
+---
+
+<img src={image} class="absolute size-9 rounded-full -start-5 bg-cover bg-center" />
+
+<h3 class="flex items-center mb-1 text-lg font-semibold text-white">
+  {title}
+  {
+    nextChallenge && (
+      <span class="text-sm font-medium me-2 px-2.5 py-0.5 rounded bg-blue-900 text-blue-300 ms-3">Next challenge</span>
+    )
+  }
+</h3>
+
+<time class="block mb-2 text-sm font-normal leading-none text-gray-400">
+  {date}
+</time>
+
+<p class="text-base font-normal text-gray-400">
+  {description}
+</p>
+
+<section class="flex flex-row">
+  {
+    tags.length ? (
+      tags.map((tag) => (
+
+        <WorkTechnology>
+          {tag}
+        </WorkTechnology>
+      ))
+    ) : null
+  }
+</section>
