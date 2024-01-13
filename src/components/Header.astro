@@ -7,28 +7,43 @@ import Linkedin from '../icons/Linkedin.astro'
 import Youtube from '../icons/Youtube.astro'
 ---
 
-<header class="fixed flex flex-col mt-20 items-center">
-  <img
-    class="rounded-full size-52"
-    src="/profile_picture.jpg"
-  />
-  <nav class="w-28 h-auto mt-16 pl-6 uppercase">
-    <ul class="flex flex-col gap-4 size-32">
-      <li><a href="/">Home</a></li>
-      <li><a href="/about">About</a></li>
-      <li><a href="/projects">Projects</a></li>
-      <li><a href="/experience">Experience</a></li>
-    </ul>
-  </nav>
+<header>
+  <nav class="
+    flex
+    w-full
+    md:justify-between
+    lg:fixed
+    lg:flex-col
+    lg:justify-start
+    lg:items-center
+    lg:w-64 lg:h-screen">
 
-  <section class="flex gap-6 mt-64 ml-10 items-center justify-center">
-    <SocialMedia href="https://linkedin.com/in/tomasarreguib">
-      <Linkedin class="w-6 h-auto" />
-    </SocialMedia>
+    <img
+      class="rounded-full size-32 md:size-40 lg:size-52"
+      src="/profile_picture.jpg"
+    />
 
-    <SocialMedia href="https://github.com/noisyBrain">
-      <Github class="w-6 h-auto" />
-    </SocialMedia>
+    <div class="
+      flex absolute right-0 top-[-100%]
+      md:bg-transparent
+      pr-10
+      md:static
+      lg:justify-start
+      lg:pr-0 lg:mt-20"
+      >
+      <ul class="
+          flex flex-col md:items-center
+          uppercase
+          gap-4
+          md:flex-row md:gap-8
+          lg:flex-col lg:items-center lg:w-full
+          lg:gap-8">
+        <li><a class="hover:text-white/70" href="/">Home</a></li>
+        <li><a class="hover:text-white/70" href="/about">About</a></li>
+        <li><a class="hover:text-white/70" href="/projects">Projects</a></li>
+        <li><a class="hover:text-white/70" href="/experience">Experience</a></li>
+      </ul>
+    </div>
 
     <!--- TODO: add redirection to gmail --->
     <SocialMedia href="#" target="blank">
