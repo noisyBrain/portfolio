@@ -50,41 +50,23 @@ import Youtube from '../icons/Youtube.astro'
       </ul>
     </div>
 
-    <div class="flex absolute right-10 top-16 md:hidden">
-      <ion-icon class="size-12 cursor-pointer" name="menu-outline"></ion-icon>
-    </div>
-  </nav>
+    <section class="hidden 2xl:flex 2xl:gap-6 2xl:mt-28">
+      <SocialMedia href="https://linkedin.com/in/tomasarreguib">
+        <Linkedin class="w-6 h-auto" />
+      </SocialMedia>
 
-  <script>
-    const navLinks = document.querySelector('.nav-links');
-    const menu = document.querySelector('ion-icon');
-      menu.addEventListener('click', (e) => {
-        e.srcElement.name = e.srcElement.name == 'menu-outline'
-          ? 'close'
-          : 'menu-outline'
+      <SocialMedia href="https://github.com/noisyBrain">
+        <Github class="w-6 h-auto" />
+      </SocialMedia>
 
-        navLinks.classList.toggle('hidden')
-
-        return e.srcElement.name
-    });
-  </script>
-
-    <!-- <section class="flex absolute top-32 left-40 gap-4 items-center justify-center mb-10 md:relative"> -->
-    <!--   <SocialMedia href="https://linkedin.com/in/tomasarreguib"> -->
-    <!--     <Linkedin class="w-6 h-auto" /> -->
-    <!--   </SocialMedia> -->
-    <!---->
-    <!--   <SocialMedia href="https://github.com/noisyBrain"> -->
-    <!--     <Github class="w-6 h-auto" /> -->
-    <!--   </SocialMedia> -->
-    <!---->
     <!--   - TODO: add redirection to gmail - -->
-    <!--   <SocialMedia href="#" target="blank"> -->
-    <!--     <Gmail class="w-6 h-auto" /> -->
-    <!--   </SocialMedia> -->
-    <!---->
-    <!--   <SocialMedia href="https://www.youtube.com/@scriptcrafter" target="_blank"> -->
-    <!--     <Youtube class="w-6 h-auto" /> -->
-    <!--   </SocialMedia> -->
-    <!-- </section> -->
+      <SocialMedia href="#" target="blank">
+        <Gmail class="w-6 h-auto" />
+      </SocialMedia>
+
+      <SocialMedia href="https://www.youtube.com/@scriptcrafter" target="_blank">
+        <Youtube class="w-6 h-auto" />
+      </SocialMedia>
+    </section>
+  </nav>
 </header>
