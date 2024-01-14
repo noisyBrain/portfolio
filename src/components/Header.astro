@@ -10,7 +10,6 @@ import Youtube from '../icons/Youtube.astro'
 <header>
   <nav class="
     flex
-    w-full
     md:justify-between
     lg:fixed
     lg:flex-col
@@ -19,14 +18,21 @@ import Youtube from '../icons/Youtube.astro'
     lg:w-64 lg:h-screen">
 
     <img
-      class="rounded-full size-32 md:size-40 lg:size-52"
+      class="rounded-full size-36 md:size-48 lg:size-52"
       src="/profile_picture.jpg"
     />
 
     <div class="
-      flex absolute right-0 top-[-100%]
+      nav-links
+      hidden
+      bg-gradient-to-b from-[#000] via-[#0f0f3d] to-black
+      flex absolute right-0 top-0
+      items-center justify-center
+      min-h-full pr-10
+      w-full
+      md:min-h-fit
+      md:flex
       md:bg-transparent
-      pr-10
       md:static
       lg:justify-start
       lg:pr-0 lg:mt-20"
