@@ -9,19 +9,25 @@ import Gmail from '../icons/Gmail.astro';
   <div class="w-full mx-auto max-w-screen-xl p-4 flex flex-col items-center sm:flex-row sm:justify-between">
 
     <span class="text-sm text-gray-400 sm:text-center">© 2024. All Rights Reserved</span>
-    <ul class="flex mt-3 text-sm font-medium text-gray-500 dark:text-gray-400 sm:mt-0 gap-4  2xl:hidden ">
-      <li>
-        <Linkedin class="size-6"/>
-      </li>
-      <li>
-        <Github class="size-6"/>
-      </li>
-      <li>
-        <Gmail class="size-6"/>
-      </li>
-      <li>
-        <Youtube class="size-6"/>
-      </li>
+    <ul class="flex mt-3 text-sm font-medium text-gray-500 sm:mt-0 2xl:hidden ">
+
+      <SocialMedia href="https://linkedin.com/in/tomasarreguib">
+        <Linkedin class="w-7 h-auto" />
+      </SocialMedia>
+
+      <SocialMedia href="https://github.com/noisyBrain">
+        <Github class="w-7 h-auto" />
+      </SocialMedia>
+
+    <!--   - TODO: add redirection to gmail - -->
+      <SocialMedia href="#">
+        <Gmail class="w-7 h-auto" />
+      </SocialMedia>
+
+      <SocialMedia href="https://www.youtube.com/@scriptcrafter">
+        <Youtube class="w-7 h-auto" />
+      </SocialMedia>
+
     </ul>
   </div>
 </footer>
